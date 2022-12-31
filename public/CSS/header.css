@@ -1,0 +1,264 @@
+#loader_bg{
+    position: fixed;
+    z-index: 999999;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+  }
+  #loader{
+    border: 0 soild transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+  }
+  #loader:before, #loader:after{
+    content: '';
+    border: 1em solid #f04336;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+  }
+  #loader:before{
+    animation-delay: .5s;
+  }
+  @keyframes loader{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+  }
+  
+  * {
+    padding: 0px;
+    margin: 0px;
+    outline: none;
+    text-decoration: none;
+  
+  scroll-behavior: smooth;
+  color: #000;
+    font-family: "Poppins", sans-serif;
+  }
+  input {
+    border: none;
+  }
+  body {
+  position: relative;
+  }
+  body::before{
+    content: " ";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('/BG/OIP (2).jpg');
+    opacity: 0.07;
+    filter: blur(0.3px);
+    z-index: -1;
+  
+  }
+  .hidden{
+    display: none;
+  }
+  nav {
+    /* border: 2px solid red; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    z-index: 2;
+  
+    /* background-color: blue; */
+  }
+  
+  .logo {
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+  
+    /* display: inline; */
+  }
+  .logo h1 {
+    display: inline;
+    font-size: 35px;
+    color: #f04336;
+  }
+  .list {
+    /* border: 2px solid blue; */
+    display: inline;
+    width: 70%;
+    margin-left: 20px;
+    padding: 10px;
+    transition: all 0.3s linear;
+  }
+  .button {
+    /* border: 2px solid aqua; */
+    display: inline;
+    text-align: right;
+    /* width: 30%; */
+    transition: all 0.3s linear;
+  }
+  .list a {
+    padding: 0.7%;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+  transition: all 0.3s linear;
+  }
+  .list a:hover,
+  .list a:active {
+    color: white;
+    background-color: #f04e42;
+    border-radius: 20px;
+  }
+  .btn {
+    padding: 15px;
+    font-size: 1.5vw;
+    background: transparent;
+    border: transparent;
+    margin-right: 20px;
+  }
+  .btn a {
+    color: #f04336;
+    transition: all 0.3s linear;
+  }
+  .btn a:hover {
+    cursor: pointer;
+    color: black;
+    background-color: transparent;
+    border-radius: 20px;
+  }
+  #shape {
+    position: absolute;
+    left: 0;
+    bottom: -13px;
+    width: 100%;
+    height: 58px;
+    z-index: -1;
+    background-repeat: repeat;
+    background-position: center;
+  }
+  /* #shape img {
+      width: 100vw;
+      height: 30px;
+    } */
+  
+  #bg {
+    position: relative;
+    top: -17px;
+    background-image: url("/BG/dog-wallpaper-20072115171845.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    
+    height: 80vh;
+    border: 2px solid black;
+    margin-bottom: 5%;
+  }
+  #quote {
+    float: right;
+    height: 100%;
+    color: black;
+    /* color: white; */
+    width: 40%;
+    /* border: 3px solid red; */
+    display: flex;
+    padding-left: 20px;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #quote h1 {
+    font-size: 200%;
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+  #quote p {
+    margin-bottom: 20px;
+  }
+  #adopt-now {
+    width: 175px;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    transition: all 0.2s linear;
+    background-color: #f04336;
+  }
+  #adopt-now:hover {
+    background: transparent;
+    border: 2px solid black;
+    color: black;
+    cursor: pointer;
+  }
+  .burger {
+    position: absolute;
+    cursor: pointer;
+    top: 24px;
+    right: 2%;
+    display: none;
+  }
+  .line {
+    width: 33px;
+    background-color: black;
+    height: 4px;
+    margin: 5px 3px;
+  }
+  #info-section {
+    background-color: #f04336;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #contact,
+  #social {
+    /* border: 2px solid white; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px 0px;
+    height: 50%;
+  }
+  
+  #phone img,
+  #email img,
+  #facebook img,
+  #instagram img {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.5em;
+  }
+  #phone,
+  #email {
+    display: flex;
+    align-items: center;
+    /* border: 2px solid white; */
+    margin: 0px 1%;
+  }
+  #phone,
+  #email {
+    filter: invert(100%);
+  }
+  #phone p {
+    font-family: "Poppins", sans-serif;
+  }
+  #facebook,
+  #instagram {
+    cursor: pointer;
+    margin: 0 0.5%;
+  }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/CSS/login.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="/ICONS/Icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in Page</title>
+  </head>
+  <body>
+    <div id="loader_bg">
+      <div id="loader">
+        
+      </div>
+    </div>
+    <form action="/login" method="POST">
+      <div class="bor">
+        <h1>Already a user?</h1>
+        <h2>LOGIN</h2>
+        <!-- <h1>SIGN IN TO YOUR ACCOUNT</h1> -->
+        <% if (messages) { %>
+        <p><%= messages.error %></p>
+        <% } %>
+        <p>
+          <input class="input" type="email" placeholder="Enter email address" name="email" required/>
+        </p>
+        <p>
+          <input class="input" type="password" placeholder="Enter password" name="password" required/>
+        </p>
+        <p>
+          New to the website?<a rel="stylesheet" id="signup" href="/register">
+            SIGN UP</a
+          >
+        </p>
+        <button rel="stylesheet" class="login">LOGIN</button>
+      </div>
+    </form>
+    <script src="submit.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        offset: 90,
+        duration: 1000,
+    });
+</script>
+ <script>
+  const burger=document.querySelector('.burger');
+  const list=document.querySelector('.list');
+  const btn=document.querySelector('.button');
+burger.addEventListener('click',()=>{
+list.classList.toggle('hidden')
+btn.classList.toggle('hidden')
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    setTimeout(function () {
+        $('#loader_bg').fadeToggle();
+    }, 1500);
+</script>
+</body>
+
+</html>
+ 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/CSS/Submit.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="/ICONS/Icon.png">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" media="screen and (max-width:1000px)" href="/CSS/Phone/phone-submit.css">
+    <!-- <link rel="stylesheet" media="screen and (max-width: 900px)" href="/phone.css" /> -->
+    <title>Shelter Registration</title>
+  </head>
+  <body>
+    
+
+  <%-include('partials/header-without') %>
+    <section id="form">
+      
+        <form action="/shelter-register" id="submit" method="post">
+            <h1>Fill The Form</h1>
+            <input type="text" id="FirstName" name="name" placeholder="Name Of Shelter" required>
+
+            <br>
+
+
+            <input type="email" id="Email" name="email" placeholder="Email Address" required>
+
+            <br>
+
+            <input type="text" id="Contact-No" name="number" placeholder="Contact Number" required> 
+
+            <br>
+
+            <input type="text" id="City" name="city" placeholder="City" required> 
+
+            <br>
+            <input type="text" id="City" name="postal" placeholder="Postal Code" required> 
+
+            <br>
+
+            <textarea name="address" id="" cols="30" rows="10" placeholder="Address Of Shelter" style="resize: none; width: 80.5%; border-radius: 10px; padding-top: 10px; padding-left: 10px; text-align: center;" required></textarea>
+            <br>
+            <!-- <div id="choose">
+                <input type="file" accept="image/png , image/jpeg" id="Choose" onclick="preview()" multiple>
+                <label for="Choose">Choose a File</label>
+                <p id="num-of-files">No File Chosen</p>
+                <div id="images"></div>
+            </div> -->
+<button type="submit" id="submit-btn">Submit</button>
+        </form>
+        
+        
+    </section>
+   
+   <%-include('partials/footer')%>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/CSS/signup.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="/ICONS/Icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Page</title>
+  </head>
+  <body>
+    <div id="loader_bg">
+      <div id="loader">
+        
+      </div>
+    </div>
+    <form action="/register" method="POST">
+      <div class="form">
+        <h1>Create an account</h1>
+        <h2>SIGN UP</h2>
+        <% if (messages) { %>
+          <p><%= messages.error %></p>
+          <% } %>
+        <p><input class="input" type="text" placeholder="Enter Name" name="name" required /></p>
+        <p><input class="input" type="email" placeholder="Enter Email address" name="email" required/></p>
+        <p><input class="input" type="password" placeholder="Enter Password" name="password" required/></p>
+       
+        <p><input class="input" type="text" placeholder="Enter District" name="district" required/></p>
+        <p>
+          <input class="input" type="text" placeholder="Enter Your Phone no." name="number" required/>
+        </p>
+        <p >
+          Already a user? <a id="login" href="/login">LOGIN</a> </p>
+        <p> <button rel="stylesheet" class="signup" >SIGN UP</button> </p>
+        </p>
+        <!-- <p>
+           <button rel="stylesheet" class="next page" href="">Next Page</button> 
+        </p> -->
+      </div>
+    </form>
+    <script src="submit.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 90,
+            duration: 1000,
+        });
+    </script>
+     <script>
+      const burger=document.querySelector('.burger');
+      const list=document.querySelector('.list');
+      const btn=document.querySelector('.button');
+    burger.addEventListener('click',()=>{
+    list.classList.toggle('hidden')
+    btn.classList.toggle('hidden')
+    })
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function () {
+            $('#loader_bg').fadeToggle();
+        }, 1500);
+    </script>
+    </body>
+    
+    </html>

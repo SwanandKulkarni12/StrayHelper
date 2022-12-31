@@ -1,0 +1,8 @@
+#footer-weblinks ul li{
+    display:flex;
+    /* border: 2px solid red; */
+  margin-bottom: 20px;
+  align-items: center;
+    position: relative;
+    flex-direction: row-reverse;
+  }

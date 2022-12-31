@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/CSS/Submit.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="/ICONS/Icon.png">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" media="screen and (max-width:1000px)" href="/CSS/Phone/phone-submit.css">
+    <!-- <link rel="stylesheet" media="screen and (max-width: 900px)" href="/phone.css" /> -->
+    <title>Adoption Form</title>
+  </head>
+  <body>
+    
+
+  <%-include('partials/header-without') %>
+    <section id="form">
+      
+        <form action="/adoptionForm/<%=id%>" id="submit" method="post">
+            <h1>Fill The Form</h1>
+            <input type="text" id="FirstName" name="firstname" placeholder="First Name" required>
+
+            <br>
+
+            <input type="text" id="LastName" name="lastname" placeholder="Last Name" required> 
+
+            <br>
+
+            <input type="email" id="Email" name="email" placeholder="Email Address" required>
+
+            <br>
+
+            <input type="text" id="Contact-No" name="number" placeholder="Contact Number" required> 
+
+            <br>
+
+            <input type="text" id="City" name="city" placeholder="City" required> 
+
+            <br>
+
+            <input type="text" id="Postal" placeholder="Postal Code" required> 
+            <br>
+            <!-- <div id="choose">
+                <input type="file" accept="image/png , image/jpeg" id="Choose" onclick="preview()" multiple>
+                <label for="Choose">Choose a File</label>
+                <p id="num-of-files">No File Chosen</p>
+                <div id="images"></div>
+            </div> -->
+<button type="submit" id="submit-btn">Submit</button>
+        </form>
+        
+            <div id="img">
+                <div id="container">
+                    <p>You'll never walk alone,
+                        <br>
+                     because I'll always be with you.</p>
+                     
+                     <p id="lovely" style="color: #f04336;">
+                         Your Lovely Dog
+                     </p>
+                </div>
+            </div>
+    </section>
+   
+   <%-include('partials/footer')%>

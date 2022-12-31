@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/CSS/adopt.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="/ICONS/Icon.png">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" media="screen and (max-width:1250px)" href="/CSS/Phone/phone-adopt.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- <link rel="stylesheet" media="screen and (max-width: 900px)" href="/phone.css" /> -->
+    <title>Adopt Page</title>
+  </head>
+<body>
+<%-include('partials/header-without')%>
+ 
+    <h1 style="text-align: center; margin: 7%;"  >Animals Waiting For Adoption</h1>
+    <section id="animals">
+      <% pets.forEach(function(pet) { %>
+       
+        <div id="pet1" data-aos="fade-up" >
+          <img src="<%=pet.image%>" alt="">
+          <div id="pet1-info">
+           
+            <p>Location: <span><%=pet.city%></span></p>
+            <p>Birth: <span><%=pet.year%></span></p>
+            <p>Age: <span><%=pet.age%></span></p>
+
+            <h6></h6>
+ <form action="/adopt" method="post">
+   <button name="id" value="<%=pet._id%>" class="adopt-btn" >Adopt</button>
+ </form>
+          </div>
+        </div>
+      
+      <% }); %>
+
+        
+     
+    
+     
+      
+    </section>
+    <!-- <section id="newsletter" data-aos="fade-up">
+      <h1>Subscribe To Newsletter</h1>
+      <div id="newsletter-email">
+        <img src="/ICONS/Email Doodle.png" alt="" />
+        <input type="email" placeholder="Email Address" />
+        <button>Subscribe</button>
+      </div>
+    </section> -->
+    <%-include('partials/footer')%>

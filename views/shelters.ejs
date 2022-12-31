@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/CSS/Shelter.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="/ICONS/Icon.png">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" media="screen and (max-width:1250px)" href="/CSS/Phone/Phone-Shelters.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- <link rel="stylesheet" media="screen and (max-width: 900px)" href="/phone.css" /> -->
+    <title>Shelter Page</title>
+  </head>
+
+  <body>
+   <%-include('partials/header-without')%>
+    <h1 style="text-align: center; margin: 7%;"  >Shelters waiting for animals</h1>
+    <section id="animals">
+      <% shelters.forEach(function(shelter) { %>
+        <div id="pet1" data-aos="fade-up" >
+          <!-- <img src="/IMAGES/Cat1.jpg" alt=""> -->
+          <div id="pet1-info">
+            <p>Name: <span><%=shelter.name%></span></p>
+            <p>Location: <span><%=shelter.city%></span></p>
+            <p>Address:<span><%=shelter.address%></span></p>
+        <p>Postal Code:<span><%=shelter.postal%></span></p>
+        <a href = "mailto:<%=shelter.email%>?subject = Feedback&body = Message" class="adopt-btn">
+   Contact Now
+          </a>
+          </div>
+        </div>
+      <% }); %>
+      
+      
+    </section>
+   <%-include('partials/footer')%>
